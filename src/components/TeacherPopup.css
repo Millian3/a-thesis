@@ -1,0 +1,51 @@
+/* Overlay background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dim backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Centered card */
+.popup-card {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 14px;
+  width: 420px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: 3px solid #1a73e8; /* blue */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Teacher name */
+.popup-card h2 {
+  margin-bottom: 1rem;
+  color: #1a73e8;
+  font-size: 1.6rem;
+}
+
+/* Action highlight */
+.taken {
+  color: #ffd600; /* yellow */
+  font-weight: bold;
+}
+.returned {
+  color: #1a73e8; /* blue */
+  font-weight: bold;
+}
+
+/* Time text */
+.time {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}

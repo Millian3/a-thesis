@@ -1,0 +1,37 @@
+/* RfidInput.css */
+.rfid-input {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.rfid-input h2 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+}
+
+.rfid-input input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #0056b3;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f9f9f9;
+  margin-bottom: 0.5rem;
+  color: #0056b3;
+}
+
+.rfid-input input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 6px #ffc107;
+}
+
+.rfid-input p {
+  font-size: 0.9rem;
+  color: #666;
+}

@@ -1,0 +1,210 @@
+/* AdminPanel.css */ 
+
+.admin-panel {
+  width: 900px;
+  max-width: 95%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Headings */
+.admin-panel h2,
+.admin-panel h3 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+}
+
+/* ===== Top Buttons ===== */
+.admin-top {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #004494;
+  transform: translateY(-2px);
+}
+
+.btn.ghost {
+  background-color: #ffd600;
+  color: #333;
+}
+
+.btn.ghost:hover {
+  background-color: #e6c200;
+}
+
+/* ===== Keys Grid ===== */
+.keys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.key-card {
+  background: #f9fbff;
+  border: 2px solid #e0e6f0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.key-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.key-card h4 {
+  margin: 0;
+  color: #0056b3;
+}
+
+.key-card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.key-card .available {
+  color: #0056b3;
+  font-weight: bold;
+}
+
+.key-card .taken {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.key-actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* ===== Logs Table ===== */
+.logs {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.logs th {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.logs td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.logs tr:nth-child(even) {
+  background-color: #f9fbff;
+}
+
+.logs tr:hover {
+  background-color: #fff9e6; /* subtle yellow hover */
+}
+
+/* ===== Loading Screen ===== */
+.admin-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  font-family: Arial, sans-serif;
+  color: #1a73e8;
+}
+
+/* Key loader (unchanged from your version) */
+.key-loader {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  animation: turn 2s infinite ease-in-out;
+}
+
+.key-head {
+  width: 40px;
+  height: 40px;
+  background: #ffd600;
+  border: 4px solid #1a73e8;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.key-shaft {
+  position: absolute;
+  left: 38px;
+  top: 14px;
+  width: 60px;
+  height: 12px;
+  background: #1a73e8;
+  border-radius: 3px;
+}
+
+.key-shaft::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  width: 16px;
+  height: 6px;
+  background: #ffd600;
+  border: 2px solid #1a73e8;
+  border-radius: 2px;
+}
+
+@keyframes turn {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Status tags */
+.status-tag {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.status-tag.available {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.status-tag.taken {
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
